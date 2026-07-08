@@ -75,7 +75,7 @@ app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173","http://127.0.0.1:5173", "http://192.168.137.1:5173", "http://192.168.217.1:5173", "http://10.59.221.124:5173", "https://ai-sdds-production-d15c.up.railway.app", "https://ai-sdds-pwa-sh73.vercel.app"],
+    allow_origins=["http://localhost:5173","http://127.0.0.1:5173", "http://192.168.137.1:5173", "http://192.168.217.1:5173", "http://10.59.221.124:5173", "https://ai-sdds-production-d15c.up.railway.app", "https://ai-sdds-pwa-sh73.vercel.app",],
     allow_credentials=False,
     allow_methods=["POST", "GET"],
     allow_headers=["X-API-Key", "Content-Type", "Accept", "Origin", "User-Agent"]
