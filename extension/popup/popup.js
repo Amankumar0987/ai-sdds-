@@ -1,4 +1,4 @@
-const DEFAULT_SETTINGS = { apiBaseUrl: "http://localhost:8000", apiKey: "", enabled: true };
+const DEFAULT_SETTINGS = { apiBaseUrl: "https://ai-sdds-production-d15c.up.railway.app", apiKey: "", enabled: true };
 
 async function load() {
   const settings = await chrome.storage.sync.get(DEFAULT_SETTINGS);

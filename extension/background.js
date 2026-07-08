@@ -7,7 +7,7 @@
  */
 
 const DEFAULT_SETTINGS = {
-  apiBaseUrl: "http://localhost:8000",
+  apiBaseUrl: "https://ai-sdds-production-d15c.up.railway.app",
   apiKey: "",
   enabled: true,
 };
