@@ -6,6 +6,7 @@ RUN apt-get update \
        tesseract-ocr \
        tesseract-ocr-eng \
        tesseract-ocr-hin \
+       libmagic1 \
     && rm -rf /var/lib/apt/lists/*
 WORKDIR /app
 
