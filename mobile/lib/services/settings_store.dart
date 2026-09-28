@@ -34,7 +34,7 @@ class Settings {
 
 class SettingsStore {
   static const _kApiBaseUrl = 'ai_sdds_api_base_url';
-  static const _kApiKey = 'ai_sdds_api_key';
+  static const _kApiKey = 'ai_sdds_api_key_storage';
   static const _kEnabled = 'ai_sdds_enabled';
 
   final FlutterSecureStorage _storage;
