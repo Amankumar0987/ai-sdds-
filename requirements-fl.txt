@@ -1,0 +1,2 @@
+torch==2.12.1
+flwr[simulation]==1.32.0
