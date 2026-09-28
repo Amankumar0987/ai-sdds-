@@ -51,8 +51,13 @@ jobs:
       - name: Secret scan (detect-secrets)
         run: |
           pip install detect-secrets
-          detect-secrets scan --all-files --exclude-files 'node_modules/' > /tmp/current.json
-          detect-secrets audit --diff .secrets.baseline /tmp/current.json || true
+          detect-secrets scan --all-files \
+            --exclude-files '(^|/)\.git/' \
+            --exclude-files '(^|/)\.pytest_cache/' \
+            --exclude-files '(^|/)\.secrets\.baseline$' \
+            --exclude-files '(^|/)node_modules/' \
+            > /tmp/current.json
+         
           # Fails the build if a NEW (un-audited) potential secret shows up vs the committed baseline
           python -c "
           import json
