@@ -26,7 +26,6 @@ prometheus-client==0.25.0
 # NOTE: flwr pins cryptography<47.0.0, blocking a patched version that
 # fixes a Moderate CVE (GHSA-537c-gmf6-5ccf). See SECURITY_CHECKLIST.md.
 # Scope is limited to fl/ simulation tooling, not the production API.
-torch==2.12.1
-flwr[simulation]==1.32.0
+
 cryptography==49.0.0
 setuptools==83.0.0
