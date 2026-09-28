@@ -28,5 +28,4 @@ prometheus-client==0.25.0
 # Scope is limited to fl/ simulation tooling, not the production API.
 
 cryptography==50.0.0
-h11==0.16.0
-setuptools==83.0.0
+
