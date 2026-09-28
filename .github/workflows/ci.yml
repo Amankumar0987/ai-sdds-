@@ -25,6 +25,9 @@ jobs:
       - name: Install Python dependencies
         run: pip install -r requirements.txt pip-audit
 
+      - name: Check OpenCV
+        run: python -c "import cv2; print(cv2.__version__); print(cv2.__file__); print(hasattr(cv2, 'CascadeClassifier'))"
+
       - name: Run tests
         run: python -m pytest tests/ -v
 
