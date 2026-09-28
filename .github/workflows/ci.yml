@@ -36,6 +36,9 @@ jobs:
       - name: Run tests
         run: python -m pytest tests/ -v
 
+      - name: Install FL dependencies for tests
+        run: python -m pip install -r requirements-fl.txt
+
       - name: Install pip-audit
         run: python -m pip install pip-audit
 
