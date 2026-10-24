@@ -10,9 +10,15 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 WORKDIR /app
 
+RUN pip install --no-cache-dir torch torchvision ultralytics --index-url https://download.pytorch.org/whl/cpu
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 RUN pip install --force-reinstall opencv-python-headless==4.12.0.88
+
+# हल्का PyTorch और Ultralytics इंस्टॉल करें
+
+
+
 
 COPY core/ ./core/
 COPY api/ ./api/
